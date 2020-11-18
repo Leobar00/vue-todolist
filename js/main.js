@@ -3,14 +3,28 @@ const app = new Vue({
     data:{
         arrayInput:[],
         inputUtente: '',
+        click: false,
+        
     },
     methods:{
         clickInput: function(){
-            this.arrayInput.push(this.inputUtente);
-            this.inputUtente='';
+            if(this.inputUtente === ''){
+                inputUtente = ''
+            }else {
+                this.arrayInput.push(this.inputUtente)
+            }
+            this.inputUtente=''
         },
-        
-        
+        checkClick: function(){
+             if(this.click == false){
+                return this.click = true
+             }
+                 console.log(this.click)
+        },
+        greenClick: function(){
+            this.click 
+            console.log(this.click)
+        }
         
     }
 })

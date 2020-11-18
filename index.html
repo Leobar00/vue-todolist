@@ -33,7 +33,7 @@
                     <!-- input utente -->
                 <div class="row input-utente">
                     <div class="col-12">
-                        <input type="text" placeholder="Nuovo Todo" v-model='inputUtente' >
+                        <input class="input-text" type="text" placeholder="Nuovo Todo" v-model='inputUtente' >
                         <button @click='clickInput' class="btn btn-secondary">Aggiungi</button>
                     </div>
                 </div>
@@ -42,8 +42,8 @@
             <div class="container list-item">
                 <div class="row">
                     <div class="col-12">
-                        <ul v-for='(words,index) in arrayInput'>
-                            <li>
+                        <ul   v-for='(words,index) in arrayInput'>
+                            <li @click="checkClick" :class="checkClick == true ? 'green' : 'bgdefault'">
                                 <span><strong>{{words}}</strong></span>
                                 <span>
                                     <button @click='arrayInput.splice(index,1)'>
