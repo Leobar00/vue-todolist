@@ -1,0 +1,22 @@
+#root{
+    text-align: center;
+}
+.logo-titolo > *{
+    width: 40%;
+    height:70%;
+    margin: 50px;
+}
+.input-utente{
+    margin: 50px;
+}
+.list-item{
+    background-color:#f0f0f0;
+    border-radius: 10px;
+}
+ul li{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid grey;
+    padding: 10px;
+}
