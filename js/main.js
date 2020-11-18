@@ -6,10 +6,11 @@ const app = new Vue({
     },
     methods:{
         clickInput: function(){
-            this.arrayInput.push(this.inputUtente)
+            this.arrayInput.push(this.inputUtente);
+            this.inputUtente='';
         },
-        deleteElement: function(){
-            this.inputUtente.splice(index,1)
-        }
+        
+        
+        
     }
 })
