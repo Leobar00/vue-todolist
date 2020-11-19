@@ -3,7 +3,7 @@ const app = new Vue({
     data:{
         arrayInput:[],
         inputUtente: '',
-        click: false,
+        clickArray: []
         
     },
     methods:{
@@ -11,20 +11,27 @@ const app = new Vue({
             if(this.inputUtente === ''){
                 inputUtente = ''
             }else {
-                this.arrayInput.push(this.inputUtente)
+                this.arrayInput.push(this.inputUtente);
+                this.clickArray.push(false)               
             }
             this.inputUtente=''
         },
-        checkClick: function(){
-             if(this.click == false){
-                return this.click = true
-             }
-                 console.log(this.click)
-        },
-        greenClick: function(){
-            this.click 
-            console.log(this.click)
-        }
+        deleteEl(index){
+            this.arrayInput.splice(index,1)
+            this.clickArray.splice(index,1)
+        },                
+        toggleIsClicked(index){
+            // mettiamo come primo l'array che deve cambiare,indice che deve cambiare
+            Vue.set(this.clickArray, index , !this.clickArray[index])
+        } 
+        
+            // if(this.click == false){
+                // this.click = true
+
+            // }else{
+                // this.click = false
+            // }
+        
         
     }
 })

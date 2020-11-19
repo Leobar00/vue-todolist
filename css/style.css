@@ -33,3 +33,6 @@ ul li{
     border-radius: 5px;
     border:1px outset grey;
 }
+.delete-button{
+    border: grey;
+}
